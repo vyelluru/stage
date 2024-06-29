@@ -14,7 +14,7 @@ const model = async() => {
         image: "https://raw.githubusercontent.com/timothybrooks/instruct-pix2pix/main/imgs/example.jpg",
         //prompt: "Make this room a modern San Francisco living room.",
         prompt: "Make him a astronaut",
-        device: "cpu"
+        //device: "cpu"
     };
 
     const output = await replicate.run("timothybrooks/instruct-pix2pix:30c1d0b916a6f8efce20493f5d61ee27491ab2a60437c13c588468b9810ec23f", { input });
