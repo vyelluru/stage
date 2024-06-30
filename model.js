@@ -11,9 +11,11 @@ const model = async () => {
         prompt: "Make this room a modern New York living room."
     };
     
-    const outputUrl = await replicate.run("timothybrooks/instruct-pix2pix:30c1d0b916a6f8efce20493f5d61ee27491ab2a60437c13c588468b9810ec23f", { input });
-    const response = await axios.get(outputUrl, { responseType: 'arraybuffer' });
-    return response.data;
+    //const outputUrl = await replicate.run("timothybrooks/instruct-pix2pix:30c1d0b916a6f8efce20493f5d61ee27491ab2a60437c13c588468b9810ec23f", { input });
+    // const response = await axios.get(outputUrl, { responseType: 'arraybuffer' });
+    // return response.data;
+    const output = await replicate.run("timothybrooks/instruct-pix2pix:30c1d0b916a6f8efce20493f5d61ee27491ab2a60437c13c588468b9810ec23f", { input });
+    return output
 };
 
 module.exports = model;
